@@ -1,0 +1,91 @@
+.navbar {
+  border-bottom: 2px solid white;
+  width: 100vw;
+  height : 10vh;
+  padding : 10px 5vw;
+  display: flex;
+}
+
+.navbar > .logo {
+  color : white;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size : 60px;
+  width : fit-content;
+  margin: auto 20px auto 0;
+}
+
+.navbar > .center-div {
+  display: flex;
+  /*border : 1px solid white;*/
+  width : 70vw;
+}
+
+.center-div > .menus {
+  /*border: 1px solid red;*/
+  width : fit-content;
+  margin: auto 20px auto 4vw;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-size : 26px;
+  font-style: normal;
+}
+
+.center-div > .menus ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.center-div > .menus li {
+  float: left;
+}
+
+.center-div > .menus a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 15px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ddd;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.navbar a:hover::before {
+  transform: translateX(0);
+}
+.navbar a:hover {
+  color: black;
+}
+
+.center-div > .searchbox {
+  /*border: 1px solid red;*/
+  width : fit-content;
+  height: fit-content;
+  margin: auto 10px auto auto;
+}
+
+.center-div > .searchbox input {
+  width : 20vw;
+  outline: none;
+  border : 0;
+  border-radius: 18px;
+  padding: 1vh 20px;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+}
