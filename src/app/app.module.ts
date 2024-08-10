@@ -16,6 +16,7 @@ import { Base64EncoderDecoderComponent } from './base64-encoder-decoder/base64-e
 import { TextDiffCheckerComponent } from './text-diff-checker/text-diff-checker.component';
 import { RegexTesterComponent } from './regex-tester/regex-tester.component';
 import { MarkdownFormatComponent } from './markdown-format/markdown-format.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,11 +34,12 @@ import { MarkdownFormatComponent } from './markdown-format/markdown-format.compo
     RegexTesterComponent,
     MarkdownFormatComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgOptimizedImage,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
