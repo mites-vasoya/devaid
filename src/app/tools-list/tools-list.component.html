@@ -1,0 +1,12 @@
+<div class="main-container">
+  <div class="tools-container">
+    <div class="tool-box" *ngFor="let tool of tools" routerLink={{tool.url}}>
+      <p class="title">
+        {{tool.title}}
+      </p>
+      <p class="description">
+        {{tool.description}}
+      </p>
+    </div>
+  </div>
+</div>
