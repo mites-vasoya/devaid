@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-jsonformatter',
@@ -10,15 +11,21 @@ export class JSONFormatterComponent {
   jsonOutput: string = '';
   errorMessage: string = '';
 
+  constructor(private messageService: MessageService) {
+  }
+
   formatJson(): void {
     try {
-      // Parse the input JSON and then stringify it with indentation
-      const parsedJson = JSON.parse(this.jsonInput);
-      this.jsonOutput = JSON.stringify(parsedJson, null, 2);
-      this.errorMessage = '';
+      if(this.jsonInput != '') {
+        // Parse the input JSON and then stringify it with indentation
+        const parsedJson = JSON.parse(this.jsonInput);
+        this.jsonOutput = JSON.stringify(parsedJson, null, 2);
+        this.errorMessage = '';
+      }
+
     } catch (error) {
       // Handle any JSON parsing errors
-      this.errorMessage = 'Invalid JSON format. Please check your input.';
+      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Invalid JSON format. Please check your input.' });
       this.jsonOutput = '';
     }
   }

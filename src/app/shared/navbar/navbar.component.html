@@ -1,18 +1,24 @@
 <div class="navbar">
-  <div class="logo">
+  <div class="logo" routerLink="">
     DevAid
   </div>
   <div class="center-div">
     <div class="menus">
       <ul>
         <li><a routerLink="">Home</a></li>
-        <li><a href="#services">Tools</a></li>
+        <li><a href="tools/list">Tools</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
     <div class="searchbox">
-      <input type="text" name="searchbox" id="searchbox" placeholder="Search Tool Here...">
+      <input type="text" [(ngModel)]="searchbar_input" (ngModelChange)="onSearch()" name="searchbox" id="searchbox"
+             placeholder="Search Tool Here...">
+      <div class="search-result" *ngIf="searched_items.length != 0">
+        <p class="result" *ngFor="let result of searched_items" (click)="navigateOnClick(result)" routerLink={{result.url}}>
+          {{ result.title }}
+        </p>
+      </div>
     </div>
   </div>
   <div class="other"></div>
