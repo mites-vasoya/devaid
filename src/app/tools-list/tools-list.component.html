@@ -1,6 +1,6 @@
 <div class="main-container">
   <div class="tools-container">
-    <div class="tool-box" *ngFor="let tool of tools" routerLink={{tool.url}}>
+    <div class="tool-box" *ngFor="let tool of tools; let i = index" (click)="navigateToUrl(i)">
       <p class="title">
         {{tool.title}}
       </p>
