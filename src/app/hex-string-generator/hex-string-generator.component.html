@@ -1,1 +1,9 @@
-<p>hex-string-generator works!</p>
+<div class="hex-generator">
+  <h2>Hexadecimal String Generator</h2>
+
+  <button (click)="generateHexString()">Generate Hex String</button>
+
+  <div class="output">
+    <p *ngIf="hexString">Generated Hex: <strong>{{ hexString }}</strong></p>
+  </div>
+</div>

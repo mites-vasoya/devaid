@@ -1,0 +1,26 @@
+/* hex-generator.component.css */
+.hex-generator {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.output {
+  font-size: 18px;
+  color: #b4b4b4;
+}
+
+strong {
+  color: #ff5733; /* Example color for the generated hex string */
+}

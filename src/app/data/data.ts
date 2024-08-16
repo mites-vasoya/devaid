@@ -18,7 +18,7 @@ export const tools : any[] = [
     "title": "Hex String Generator",
     "description": "Generates a hexadecimal string of a specified length.",
     "url" : "/tools/hex-string-generator",
-    "launched": "no"
+    "launched": "yes"
   },
   {
     "id": 4,
