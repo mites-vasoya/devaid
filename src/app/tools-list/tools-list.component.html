@@ -1,6 +1,9 @@
 <div class="main-container">
   <div class="tools-container">
     <div class="tool-box" *ngFor="let tool of tools; let i = index" (click)="navigateToUrl(i)">
+      <div class="coming-soon" *ngIf="tool.launched != 'yes'">
+        Coming Soon
+      </div>
       <p class="title">
         {{tool.title}}
       </p>
