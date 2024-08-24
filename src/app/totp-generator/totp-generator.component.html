@@ -1,0 +1,35 @@
+<!-- totp-generator.component.html -->
+<div class="totp-generator">
+  <h2>TOTP Generator</h2>
+
+  <div class="input-group">
+    <label for="secret">Secret:</label>
+    <input type="text" id="secret" [(ngModel)]="secret" placeholder="Enter secret" />
+  </div>
+
+  <div class="input-group">
+    <label for="algorithm">Algorithm:</label>
+    <select id="algorithm" [(ngModel)]="algorithm">
+      <option value="SHA-1">SHA-1</option>
+      <option value="SHA-256">SHA-256</option>
+      <option value="SHA-512">SHA-512</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="digits">Digits:</label>
+    <input type="number" id="digits" [(ngModel)]="digits" min="6" max="8" />
+  </div>
+
+  <div class="input-group">
+    <label for="interval">Interval (seconds):</label>
+    <input type="number" id="interval" [(ngModel)]="interval" min="15" max="60" />
+  </div>
+
+  <button (click)="generateTOTP()">Generate TOTP</button>
+
+  <div class="output">
+    <p *ngIf="totpCode">Generated TOTP: <strong>{{ totpCode }}</strong></p>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>
+</div>

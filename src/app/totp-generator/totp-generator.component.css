@@ -1,0 +1,51 @@
+/* totp-generator.component.css */
+.totp-generator {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.output {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+strong {
+  color: #ff5733; /* Example color for the generated TOTP */
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

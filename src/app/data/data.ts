@@ -68,5 +68,12 @@ export const tools : any[] = [
     "description": "Previews Markdown-formatted text in real-time.",
     "url" : "/tools/markdown-format",
     "launched": "no"
+  },
+  {
+    "id": 11,
+    "title": "TOTP Generator",
+    "description": "Generate One-Time Passwords with Confidence.",
+    "url" : "/tools/totp-generator",
+    "launched": "yes"
   }
 ];

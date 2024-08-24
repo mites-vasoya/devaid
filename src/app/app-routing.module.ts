@@ -10,6 +10,7 @@ import {Base64EncoderDecoderComponent} from "./base64-encoder-decoder/base64-enc
 import {UrlEncoderDecoderComponent} from "./url-encoder-decoder/url-encoder-decoder.component";
 import {HexStringGeneratorComponent} from "./hex-string-generator/hex-string-generator.component";
 import {JSONParserComponent} from "./jsonparser/jsonparser.component";
+import {TotpGeneratorComponent} from "./totp-generator/totp-generator.component";
 
 const routes: Routes = [{
   path: "", component: HomeComponent,
@@ -35,6 +36,8 @@ const routes: Routes = [{
   path:"tools/regex-tester", component: RegexTesterComponent
 }, {
   path:"tools/markdown-format", component: MarkdownFormatComponent
+}, {
+  path:"tools/totp-generator", component: TotpGeneratorComponent
 }];
 
 @NgModule({

@@ -21,6 +21,7 @@ import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MegaMenuModule} from "primeng/megamenu";
+import { TotpGeneratorComponent } from './totp-generator/totp-generator.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MegaMenuModule} from "primeng/megamenu";
     Base64EncoderDecoderComponent,
     TextDiffCheckerComponent,
     RegexTesterComponent,
-    MarkdownFormatComponent
+    MarkdownFormatComponent,
+    TotpGeneratorComponent
   ],
   imports: [
     BrowserModule,
