@@ -1,12 +1,23 @@
 /* totp-generator.component.css */
 .totp-generator {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 20px 5vw;
+  width: fit-content;
+  /*max-width: 400px;*/
+  height: fit-content;
+  margin: 12vh auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+h2 {
+  /*border: 1px solid red;*/
+  color : white;
+  font-size: 2.5rem;
+  margin: 20px;
 }
 
 .input-group {
@@ -23,9 +34,11 @@ label {
 
 input,
 select {
-  width: 100%;
+  width: 26vw;
+  height: 50px;
   padding: 8px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 button {
@@ -37,8 +50,9 @@ button {
 
 .output {
   margin-top: 20px;
-  font-size: 18px;
-  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #adadad;
 }
 
 strong {
@@ -48,4 +62,9 @@ strong {
 .error {
   color: red;
   font-weight: bold;
+}
+
+.output > .timer-progress-bar {
+  /*border: 1px solid red;*/
+  margin: 10px auto;
 }

@@ -22,6 +22,7 @@ import {MessageService} from "primeng/api";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MegaMenuModule} from "primeng/megamenu";
 import { TotpGeneratorComponent } from './totp-generator/totp-generator.component';
+import {ProgressBarModule} from "primeng/progressbar";
 
 @NgModule({
   declarations: [
@@ -40,15 +41,16 @@ import { TotpGeneratorComponent } from './totp-generator/totp-generator.componen
     MarkdownFormatComponent,
     TotpGeneratorComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgOptimizedImage,
-    FormsModule,
-    ToastModule,
-    BrowserAnimationsModule,
-    MegaMenuModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgOptimizedImage,
+        FormsModule,
+        ToastModule,
+        BrowserAnimationsModule,
+        MegaMenuModule,
+        ProgressBarModule
+    ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })

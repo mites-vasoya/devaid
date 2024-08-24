@@ -4,12 +4,12 @@
 
   <div class="input-group">
     <label for="secret">Secret:</label>
-    <input type="text" id="secret" [(ngModel)]="secret" placeholder="Enter secret" />
+    <input type="text" id="secret" [(ngModel)]="secret" (ngModelChange)="generateTOTP()" placeholder="Enter secret" />
   </div>
 
   <div class="input-group">
     <label for="algorithm">Algorithm:</label>
-    <select id="algorithm" [(ngModel)]="algorithm">
+    <select id="algorithm" [(ngModel)]="algorithm" (ngModelChange)="generateTOTP()">
       <option value="SHA-1">SHA-1</option>
       <option value="SHA-256">SHA-256</option>
       <option value="SHA-512">SHA-512</option>
@@ -18,17 +18,19 @@
 
   <div class="input-group">
     <label for="digits">Digits:</label>
-    <input type="number" id="digits" [(ngModel)]="digits" min="6" max="8" />
+    <input type="number" id="digits" [(ngModel)]="digits" (ngModelChange)="generateTOTP()" min="6" max="8" />
   </div>
 
   <div class="input-group">
     <label for="interval">Interval (seconds):</label>
-    <input type="number" id="interval" [(ngModel)]="interval" min="15" max="60" />
+    <input type="number" id="interval" [(ngModel)]="interval" (ngModelChange)="generateTOTP()" min="15" max="60" />
   </div>
 
-  <button (click)="generateTOTP()">Generate TOTP</button>
-
   <div class="output">
+    <div class="timer-progress-bar">
+      <p-progressBar [value]="timerCount * 100 / interval" showValue="false"/>
+    </div>
+
     <p *ngIf="totpCode">Generated TOTP: <strong>{{ totpCode }}</strong></p>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   </div>
