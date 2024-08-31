@@ -1,24 +1,29 @@
 .main-container {
+  border: 1px solid red;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 10vh);
-  background-color: #000000;
+  min-height: calc(100vh - 10vh);
+  height: fit-content;
+  background-color: #fffffe;
   font-family: Arial, sans-serif;
 }
 
 .tools-container {
   width: calc(90vw); /* 80vw minus the padding */
+  height: fit-content;
   padding: 20px;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px 20px;
+  display: grid;
+  grid-template-columns: 20vw 20vw;
+  grid-gap: 10px 10px;
+  border: 1px solid red;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   justify-content: center;
+  margin: 0 0;
 }
 
 .tools-btn {

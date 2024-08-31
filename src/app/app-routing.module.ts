@@ -13,7 +13,7 @@ import {JSONParserComponent} from "./jsonparser/jsonparser.component";
 import {TotpGeneratorComponent} from "./totp-generator/totp-generator.component";
 
 const routes: Routes = [{
-  path: "", component: HomeComponent,
+  path: "", redirectTo: "/tools/list", pathMatch: "full"
 }, {
   path : "tools/list", component : ToolsListComponent
 },{
