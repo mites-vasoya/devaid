@@ -6,15 +6,24 @@ import { Component } from '@angular/core';
   styleUrl: './hex-string-generator.component.css'
 })
 export class HexStringGeneratorComponent {
-  hexString: string = '';
+  hexStrings: string[] = [];
+  stringLen: number = 0;
+  noOfOps: number = 0;
 
-  generateHexString(length: number = 8): void {
-    let result = '';
+  generateHexString(): void {
     const characters = '0123456789ABCDEF';
     const charactersLength = characters.length;
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+
+    this.hexStrings = []
+
+    for (let i = 0; i < this.noOfOps; i++) {
+      let hexStr: string = "";
+      for (let i = 0; i < this.stringLen; i++) {
+        hexStr += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      this.hexStrings.push(hexStr);
     }
-    this.hexString = result;
+
+    console.log("Hex String: ", this.hexStrings);
   }
 }

@@ -1,9 +1,21 @@
 <div class="hex-generator">
   <h2>Hexadecimal String Generator</h2>
 
-  <button (click)="generateHexString()">Generate Hex String</button>
+  <div class="fields-container">
+    <p-floatLabel>
+      <input pInputText id="stringLen" [(ngModel)]="stringLen" />
+      <label for="stringLen">Username</label>
+    </p-floatLabel>
+    <p-floatLabel>
+      <input pInputText id="noOfStr" [(ngModel)]="noOfOps" />
+      <label for="noOfStr">Username</label>
+    </p-floatLabel>
+    <button (click)="generateHexString()">Generate Hex String</button>
+  </div>
+
+
 
   <div class="output">
-    <p *ngIf="hexString">Generated Hex: <strong>{{ hexString }}</strong></p>
+    <p *ngFor="let hexStr of hexStrings">Generated Hex: <strong>{{ hexStr }}</strong></p>
   </div>
 </div>

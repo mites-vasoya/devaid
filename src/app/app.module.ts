@@ -26,6 +26,7 @@ import {ProgressBarModule} from "primeng/progressbar";
 import {JsonViewerComponent} from './json-viewer/json-viewer.component';
 import {JsonFormatterPipe} from "./shared/pipes/json-formatter.pipe";
 import {NgxJsonViewerModule} from "ngx-json-viewer";
+import {FloatLabelModule} from "primeng/floatlabel";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {NgxJsonViewerModule} from "ngx-json-viewer";
     MegaMenuModule,
     ProgressBarModule,
     NgxJsonViewerModule,
+    FloatLabelModule,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
