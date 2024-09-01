@@ -2,20 +2,29 @@
   <h2>Hexadecimal String Generator</h2>
 
   <div class="fields-container">
-    <p-floatLabel>
-      <input pInputText id="stringLen" [(ngModel)]="stringLen" />
-      <label for="stringLen">Username</label>
-    </p-floatLabel>
-    <p-floatLabel>
-      <input pInputText id="noOfStr" [(ngModel)]="noOfOps" />
-      <label for="noOfStr">Username</label>
-    </p-floatLabel>
-    <button (click)="generateHexString()">Generate Hex String</button>
+
+    <div class="container">
+      <input
+        pInputText
+        id="stringLen"
+        aria-describedby="username-help"
+        [(ngModel)]="stringLen" placeholder="Enter String Length"
+        class="ip-fields"/>
+    </div>
+
+    <div class="container">
+      <input
+        pInputText
+        id="noOfStr"
+        aria-describedby="username-help"
+        [(ngModel)]="noOfOps" placeholder="No. Of Strings"
+        class="ip-fields"/>
+    </div>
+    <p-button label="Generate Hex String" severity="contrast" (click)="generateHexString()"/>
   </div>
 
-
-
   <div class="output">
-    <p *ngFor="let hexStr of hexStrings">Generated Hex: <strong>{{ hexStr }}</strong></p>
+    <h2>Generated Hex Output</h2>
+    <p *ngFor="let hexStr of hexStrings"><strong>{{ hexStr }}</strong></p>
   </div>
 </div>

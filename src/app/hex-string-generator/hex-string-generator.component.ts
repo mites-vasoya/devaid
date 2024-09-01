@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   styleUrl: './hex-string-generator.component.css'
 })
 export class HexStringGeneratorComponent {
-  hexStrings: string[] = [];
-  stringLen: number = 0;
-  noOfOps: number = 0;
+  hexStrings: string[] = ["QQQQQQ"];
+  stringLen: number | undefined;
+  noOfOps: number | undefined;
 
   generateHexString(): void {
+
+    if(this.stringLen == undefined || this.noOfOps == undefined || this.stringLen == 0 || this.noOfOps == 0 || this.stringLen > 20 || this.stringLen > 20) {
+      alert("String Length and No. Of Output should be greater than 0 and less than 20");
+      return ;
+    }
+
     const characters = '0123456789ABCDEF';
     const charactersLength = characters.length;
 

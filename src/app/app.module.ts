@@ -27,6 +27,8 @@ import {JsonViewerComponent} from './json-viewer/json-viewer.component';
 import {JsonFormatterPipe} from "./shared/pipes/json-formatter.pipe";
 import {NgxJsonViewerModule} from "ngx-json-viewer";
 import {FloatLabelModule} from "primeng/floatlabel";
+import {InputTextModule} from "primeng/inputtext";
+import {Button} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import {FloatLabelModule} from "primeng/floatlabel";
     ProgressBarModule,
     NgxJsonViewerModule,
     FloatLabelModule,
+    InputTextModule,
+    Button,
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
