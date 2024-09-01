@@ -1,1 +1,34 @@
-<p>json-viewer works!</p>
+<!--<div class="output-container">-->
+<!--  <ul>-->
+<!--    <li *ngFor="let key of (isObject(json) ? Object.keys(json) : [])">-->
+<!--      &lt;!&ndash; Display toggle icon if value is an object &ndash;&gt;-->
+<!--      <span (click)="toggleExpand(key)" class="key" [class.clickable]="isObject(json[key])">-->
+<!--      {{ key }}: {{ isObject(json[key]) ? (isExpanded(key) ? '▼' : '▶') : '' }}-->
+<!--    </span>-->
+
+<!--      &lt;!&ndash; Recursively display nested objects if expanded &ndash;&gt;-->
+<!--      <div *ngIf="isObject(json[key]) && isExpanded(key)">-->
+<!--        <app-json-viewer [json]="json[key]"></app-json-viewer>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Display value directly if it is not an object &ndash;&gt;-->
+<!--      <ng-container *ngIf="!isObject(json[key])">-->
+<!--        <span class="value">{{ json[key] }}</span>-->
+<!--      </ng-container>-->
+<!--    </li>-->
+
+<!--    &lt;!&ndash; Similar logic for arrays &ndash;&gt;-->
+<!--    <li *ngFor="let item of (isArray(json) ? json : [])">-->
+<!--      <ng-container *ngIf="isObject(item); else itemTemplate">-->
+<!--        <span (click)="toggleExpand(item)" class="key clickable">[Object] {{ isExpanded(item) ? '▼' : '▶' }}</span>-->
+<!--        <div *ngIf="isExpanded(item)">-->
+<!--          <app-json-viewer [json]="item"></app-json-viewer>-->
+<!--        </div>-->
+<!--      </ng-container>-->
+<!--      <ng-template #itemTemplate>-->
+<!--        <span class="value">{{ item }}</span>-->
+<!--      </ng-template>-->
+<!--    </li>-->
+<!--  </ul>-->
+
+<!--</div>-->

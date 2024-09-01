@@ -1,13 +1,18 @@
-<!-- json-formatter.component.html -->
 <div class="json-formatter">
-  <p-toast />
-  <h2>JSON Formatter</h2>
-
   <div class="textarea-container">
-    <textarea [(ngModel)]="jsonInput" (ngModelChange)="formatJson()" rows="10" placeholder="Enter JSON here"></textarea>
+    <!-- Textarea for JSON input -->
+    <div class="input-container">
+      <textarea [(ngModel)]="rawJson" (ngModelChange)="onJsonInputChange()" rows="10"
+                placeholder="Paste your JSON here..." class="json-input"></textarea>
+    </div>
+    <div class="output-container">
+      <div class="json-viewer-container">
+        <ngx-json-viewer [json]="formattedJson"></ngx-json-viewer>
+      </div>
+    </div>
 
-    <!--  <button (click)="formatJson()">Format JSON</button>-->
-
-    <textarea [value]="jsonOutput" rows="10" readonly></textarea>
   </div>
+
+  <!-- Display error message if JSON is invalid -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 </div>

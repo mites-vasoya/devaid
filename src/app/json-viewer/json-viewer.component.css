@@ -1,0 +1,37 @@
+.output-container {
+  border: 1px solid red;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.key {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.value {
+  color: #555;
+}
+
+/* Style for JSON output container */
+.json-output {
+  width: 48%;
+  height: 100%;
+  padding: 6px 12px;
+  background: rgb(31, 32, 35);
+  border: 1px solid rgb(60, 63, 68);
+  border-radius: 4px;
+  font-size: 20px;
+  color: rgb(247, 248, 248);
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

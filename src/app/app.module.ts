@@ -21,9 +21,11 @@ import {ToastModule} from "primeng/toast";
 import {MessageService} from "primeng/api";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MegaMenuModule} from "primeng/megamenu";
-import { TotpGeneratorComponent } from './totp-generator/totp-generator.component';
+import {TotpGeneratorComponent} from './totp-generator/totp-generator.component';
 import {ProgressBarModule} from "primeng/progressbar";
-import { JsonViewerComponent } from './json-viewer/json-viewer.component';
+import {JsonViewerComponent} from './json-viewer/json-viewer.component';
+import {JsonFormatterPipe} from "./shared/pipes/json-formatter.pipe";
+import {NgxJsonViewerModule} from "ngx-json-viewer";
 
 @NgModule({
   declarations: [
@@ -41,18 +43,20 @@ import { JsonViewerComponent } from './json-viewer/json-viewer.component';
     RegexTesterComponent,
     MarkdownFormatComponent,
     TotpGeneratorComponent,
-    JsonViewerComponent
+    JsonViewerComponent,
+    JsonFormatterPipe
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgOptimizedImage,
-        FormsModule,
-        ToastModule,
-        BrowserAnimationsModule,
-        MegaMenuModule,
-        ProgressBarModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgOptimizedImage,
+    FormsModule,
+    ToastModule,
+    BrowserAnimationsModule,
+    MegaMenuModule,
+    ProgressBarModule,
+    NgxJsonViewerModule,
+  ],
   providers: [MessageService],
   bootstrap: [AppComponent]
 })
