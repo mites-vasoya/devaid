@@ -43,6 +43,7 @@
   height: 100%;
   border: 1px solid rgb(14, 95, 225);
   overflow-y: auto;
+  overflow-x: auto;
   font-size: 20px;
   margin: 0;
 }
