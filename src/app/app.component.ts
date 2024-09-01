@@ -6,8 +6,9 @@ import {AnalyticsService} from "./services/analytics.service";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent implements OnInit{
-  title = 'devaid';
+  title = 'ToolLab';
 
   constructor(private analyticsService: AnalyticsService) {
   }

@@ -23,6 +23,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MegaMenuModule} from "primeng/megamenu";
 import { TotpGeneratorComponent } from './totp-generator/totp-generator.component';
 import {ProgressBarModule} from "primeng/progressbar";
+import { JsonViewerComponent } from './json-viewer/json-viewer.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {ProgressBarModule} from "primeng/progressbar";
     TextDiffCheckerComponent,
     RegexTesterComponent,
     MarkdownFormatComponent,
-    TotpGeneratorComponent
+    TotpGeneratorComponent,
+    JsonViewerComponent
   ],
     imports: [
         BrowserModule,
