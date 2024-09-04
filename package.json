@@ -27,6 +27,7 @@
     "ngx-ace-wrapper": "^17.0.0",
     "ngx-json-viewer": "^3.2.1",
     "otplib": "^12.0.1",
+    "primeicons": "^7.0.0",
     "primeng": "^17.18.9",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

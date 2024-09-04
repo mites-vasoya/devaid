@@ -24,13 +24,21 @@ button {
   margin-bottom: 20px;
 }
 
-.output {
+.output{
   /*border: 1px solid red;*/
   font-size: 18px;
-  color: #b4b4b4;
+  color: #777777;
   width: 80vw;
   height: fit-content;
   margin: 10px 0;
+}
+
+.output h2 {
+  text-decoration: underline;
+}
+
+.output .strings {
+  color: #555555;
 }
 
 .fields-container {
@@ -59,4 +67,14 @@ button {
 
 string {
   color: #ff5733; /* Example color for the generated hex string */
+}
+
+.copy-btn-div {
+  width: fit-content;
+  height: fit-content;
+  margin: 30px auto;
+}
+
+::ng-deep .p-button-icon {
+  margin: 0 8px;
 }

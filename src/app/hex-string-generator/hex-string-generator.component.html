@@ -24,7 +24,10 @@
   </div>
 
   <div class="output">
-    <h2>Generated Hex Output</h2>
-    <p *ngFor="let hexStr of hexStrings"><strong>{{ hexStr }}</strong></p>
+    <h2 *ngIf="hexStrings.length > 0">Generated Hex Output</h2>
+    <p *ngFor="let hexStr of hexStrings" class="strings"><strong>{{ hexStr }}</strong></p>
+    <div class="copy-btn-div">
+      <p-button label={{copyBtnLabel}} icon="pi pi-clipboard" class="copy-btn" [text]="true" [raised]="true" *ngIf="hexStrings.length > 0" severity="secondary" (click)="copyHexStrings()"/>
+    </div>
   </div>
 </div>

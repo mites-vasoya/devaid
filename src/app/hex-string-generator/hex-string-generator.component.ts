@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrl: './hex-string-generator.component.css'
 })
 export class HexStringGeneratorComponent {
-  hexStrings: string[] = ["QQQQQQ"];
+  hexStrings: string[] = [];
   stringLen: number | undefined;
   noOfOps: number | undefined;
+  copyBtnLabel: string = "Copy to Clipboard";
 
   generateHexString(): void {
+
+    this.copyBtnLabel = "Copy to Clipboard";
 
     if(this.stringLen == undefined || this.noOfOps == undefined || this.stringLen == 0 || this.noOfOps == 0 || this.stringLen > 20 || this.stringLen > 20) {
       alert("String Length and No. Of Output should be greater than 0 and less than 20");
@@ -31,5 +34,11 @@ export class HexStringGeneratorComponent {
     }
 
     console.log("Hex String: ", this.hexStrings);
+  }
+
+  copyHexStrings() {
+    navigator.clipboard.writeText(this.hexStrings.join("\n"));
+
+    this.copyBtnLabel = "Copied to Clipboard";
   }
 }
