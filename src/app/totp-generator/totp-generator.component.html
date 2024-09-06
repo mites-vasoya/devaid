@@ -32,6 +32,7 @@
     </div>
 
     <p *ngIf="totpCode">Generated TOTP: <strong>{{ totpCode }}</strong></p>
+      <p-button label={{copyBtnLabel}} icon="pi pi-clipboard" class="copy-btn" [text]="true" [raised]="true" severity="secondary" (click)="copyTOTP()"/>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   </div>
 </div>

@@ -14,6 +14,7 @@ export class TotpGeneratorComponent {
   digits: number = 6; // Length of the TOTP code
   errorMessage: string = '';
   timerCount: number = 30;
+  copyBtnLabel: string = "Copy to Clipboard";
 
   ngOnInit(): void {
     // Generate TOTP on component in  itialization
@@ -38,6 +39,7 @@ export class TotpGeneratorComponent {
       const time = Math.floor(Date.now() / 1000 / this.interval);
       this.totpCode = this.generateTotpCode(this.secret, time, this.algorithm, this.digits);
       this.errorMessage = '';
+      this.copyBtnLabel = "Copy to Clipboard";
     } catch (error: any) {
       this.errorMessage = 'Error generating TOTP: ' + error.message;
       this.totpCode = '';
@@ -98,5 +100,11 @@ export class TotpGeneratorComponent {
 
   hexToDec(hex: string): number {
     return parseInt(hex, 16);
+  }
+
+  copyTOTP() {
+    navigator.clipboard.writeText(this.totpCode);
+
+    this.copyBtnLabel = "Copied to Clipboard";
   }
 }
