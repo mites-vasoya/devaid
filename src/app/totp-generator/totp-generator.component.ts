@@ -16,7 +16,7 @@ export class TotpGeneratorComponent {
   timerCount: number = 30;
 
   ngOnInit(): void {
-    // Generate TOTP on component initialization
+    // Generate TOTP on component in  itialization
     this.secret = localStorage.getItem("totop-auth_secret") ?? "";
     this.generateTOTP();
   }
