@@ -1,6 +1,7 @@
 /* totp-generator.component.css */
 .totp-generator {
-  border: 2px solid #ffffff;
+  border: 2px solid #000000;
+  background-color: #132333;
   border-radius: 10px;
   padding: 20px 5vw;
   width: fit-content;

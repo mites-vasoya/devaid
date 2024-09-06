@@ -17,6 +17,7 @@ export class TotpGeneratorComponent {
 
   ngOnInit(): void {
     // Generate TOTP on component initialization
+    this.secret = localStorage.getItem("totop-auth_secret") ?? "";
     this.generateTOTP();
   }
 
@@ -41,6 +42,8 @@ export class TotpGeneratorComponent {
       this.errorMessage = 'Error generating TOTP: ' + error.message;
       this.totpCode = '';
     }
+
+    localStorage.setItem("totop-auth_secret", this.secret);
   }
 
   generateTotpCode(secret: string, time: number, algorithm: any, digits: number): string {
