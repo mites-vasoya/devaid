@@ -29,41 +29,34 @@ export const tools: any[] = [
   },
   {
     "id": 5,
-    "title": "Base64 Encoder",
+    "title": "Base64 Encoder-Decoder",
     "description": "Encodes text or data into a Base64 format.",
     "url": "/tools/base64-encoder",
-    "launched": "no"
+    "launched": "yes"
   },
   {
-    "id": 7,
-    "title": "Base64 Decoder",
-    "description": "Decodes Base64 encoded data back into its original format.",
-    "url": "/tools/base64-decoder",
-    "launched": "no"
-  },
-  {
-    "id": 8,
+    "id": 6,
     "title": "Text Diff Checker",
     "description": "Compares two text inputs and highlights the differences.",
     "url": "/tools/text-diff-checker",
     "launched": "no"
   },
   {
-    "id": 9,
+    "id": 7,
     "title": "Regex Tester",
     "description": "Tests regular expressions against sample text.",
     "url": "/tools/regex-tester",
     "launched": "no"
   },
   {
-    "id": 10,
+    "id": 8,
     "title": "Markdown Previewer",
     "description": "Previews Markdown-formatted text in real-time.",
     "url": "/tools/markdown-format",
     "launched": "no"
   },
   {
-    "id": 11,
+    "id": 9,
     "title": "TOTP Generator",
     "description": "Generate One-Time Passwords with Confidence.",
     "url": "/tools/totp-generator",

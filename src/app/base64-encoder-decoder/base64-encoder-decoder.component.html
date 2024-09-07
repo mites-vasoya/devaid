@@ -1,1 +1,24 @@
-<p>base64-encoder-decoder works!</p>
+<div class="base64-container">
+  <h2>Base64 Encoder/Decoder</h2>
+
+  <!-- Input for raw text -->
+  <div class="input-section">
+    <label for="rawText">Raw Text:</label>
+    <textarea id="rawText" [(ngModel)]="rawText" (ngModelChange)="onRawTextChange()" rows="5" placeholder="Enter text to encode to Base64"></textarea>
+  </div>
+
+  <!-- Display encoded Base64 text -->
+  <div class="output-section">
+    <label for="base64Encoded">Base64 Encoded:</label>
+    <textarea id="base64Encoded" [(ngModel)]="base64Encoded" (ngModelChange)="onBase64EncodedChange()" rows="5" placeholder="Base64 encoded text"></textarea>
+  </div>
+
+  <!-- Display decoded text from Base64 -->
+  <div class="output-section">
+    <label for="base64Decoded">Base64 Decoded:</label>
+    <textarea id="base64Decoded" [value]="base64Decoded" rows="5" placeholder="Decoded text will appear here" readonly></textarea>
+  </div>
+
+  <!-- Error message if any -->
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</div>
