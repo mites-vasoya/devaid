@@ -23,7 +23,7 @@ const routes: Routes = [{
 }, {
   path:"tools/hex-string-generator", component: HexStringGeneratorComponent
 }, {
-  path:"tools/url-encoder", component: UrlEncoderDecoderComponent
+  path:"tools/url-encoder-decoder", component: UrlEncoderDecoderComponent
 }, {
   path:"tools/url-encoder", component: UrlEncoderDecoderComponent
 }, {

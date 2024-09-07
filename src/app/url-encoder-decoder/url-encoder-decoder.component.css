@@ -1,0 +1,49 @@
+.url-encoder-decoder {
+  border-radius: 15px;
+  background-color: #132333;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  width: 60%;
+  height: fit-content;
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 2vw;
+  color: white;
+}
+
+h2 {
+  margin-top: 2.5vh;
+  margin-bottom: 20px;
+}
+
+.url-input, .url-output {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.url-input:focus, .url-output:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.output-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

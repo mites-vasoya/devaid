@@ -1,1 +1,21 @@
-<p>url-encoder-decoder works!</p>
+<div class="url-encoder-decoder">
+  <h2>URL Encoder/Decoder</h2>
+
+  <!-- Input field for raw URL -->
+  <textarea [(ngModel)]="rawInput" (ngModelChange)="onInputChange()" rows="4" placeholder="Paste or type your URL here..." class="url-input"></textarea>
+
+  <!-- Display the encoded URL -->
+  <div class="output-container">
+    <label>Encoded URL:</label>
+    <textarea [value]="encodedOutput" rows="4" class="url-output" readonly></textarea>
+  </div>
+
+  <!-- Display the decoded URL -->
+  <div class="output-container">
+    <label>Decoded URL:</label>
+    <textarea [value]="decodedOutput" rows="4" class="url-output" readonly></textarea>
+  </div>
+
+  <!-- Display error message if decoding fails -->
+  <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

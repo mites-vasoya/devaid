@@ -1,16 +1,16 @@
 .navbar {
-  border-bottom: 2px solid #fffffe;
+  border-bottom: 2px solid #132333;
   background-color: #fffffe;
   width: 100vw;
   height : 8vh;
   padding : 10px 5vw;
   display: flex;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  z-index: 10;
 }
 
 .navbar > .logo {
   /*border: 1px solid red;*/
-
   color : #213c55;
   font-family: "Lobster", sans-serif;
   font-weight: 400;
